@@ -5,11 +5,22 @@ o
 dsListTables(o)
 dsHasTable(o, "datashield.CNSIM1")
 dsHasTable(o, "datashield.CNSIM1xx")
+
+dsListResources(o)
+dsHasResource(o, "test.CNSIM1")
+dsHasResource(o, "test.CNSIM1xx")
+
 dsIsAsync(o)
 rbind(dsListMethods(o, type = "aggregate"), dsListMethods(o, type = "assign"))
 dsListPackages(o)
 
 res <- dsAssignTable(o, "D", "datashield.CNSIM1", async = TRUE)
+dsGetInfo(res)
+dsFetch(res)
+
+dsListResources(o)
+dsHasResource(o, "datashield.cnsim3")
+res <- dsAssignResource(o, "R1", "datashield.cnsim3", async = TRUE)
 dsGetInfo(res)
 dsFetch(res)
 
