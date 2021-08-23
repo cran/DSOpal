@@ -1,4 +1,4 @@
-13ab223083899f2972640d2fd505e427 *DESCRIPTION
+dda5a5292cef356277c587aff6fc781d *DESCRIPTION
 f2cd0660b90d3dda505d6ee4516a42f0 *NAMESPACE
 e0ef681901465d24f47f9139cb2c086a *R/DSOpal-package.R
 6aec35cdacecd75077be6bc2d9653f14 *R/OpalConnection.R
@@ -11,7 +11,7 @@ db367408101907f4eab54816ebb517c0 *R/datashield.method.r
 a01c717a5cd04064e4d4577d0f6e242a *R/datashield.symbol.r
 e58c08a7b302795fbf5134bc6c0427e4 *R/datashield.workspace.r
 64f938a984e81321992216de0594489d *R/logindata.R
-442f0357c5e8a78ec283655ee3730a13 *R/utils.R
+521d619e883bfcd9835945250d6dc5d2 *R/utils.R
 48ee7155c06098d08ebe87d1fe951deb *README.md
 ff5842e53e3216e3539ba7e33c65c4a8 *data/logindata.opal.demo.rda
 f2d37bd76e96fc3d3b7bedd9151cae5d *inst/examples/datashield-api.R
