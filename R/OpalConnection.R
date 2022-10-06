@@ -436,6 +436,30 @@ setMethod("dsSaveWorkspace", "OpalConnection", function(conn, name) {
   .datashield.workspace_save(o, name)
 })
 
+#' Restore workspace
+#' 
+#' Restore workspace from the data repository.
+#' 
+#' @param conn \code{\link{OpalConnection-class}} class object
+#' @param name Name of the workspace.
+#' 
+#' @examples
+#' \dontrun{
+#' con <- dbConnect(DSOpal::Opal(), "server1",
+#'   "username", "password", "https://opal.example.org")
+#' dsListWorkspaces(con)
+#' dsRestoreWorkspace(con, "foo")
+#' dsDisconnect(con)
+#' }
+#' 
+#' @import opalr
+#' @import methods
+#' @export
+setMethod("dsRestoreWorkspace", "OpalConnection", function(conn, name) {
+  o <- conn@opal
+  .datashield.workspace_restore(o, name)
+})
+
 #' Remove a workspace
 #' 
 #' Remove a workspace on the data repository.
@@ -469,7 +493,7 @@ setMethod("dsRmWorkspace", "OpalConnection", function(conn, name) {
 #' @param conn \code{\link{OpalConnection-class}} object.
 #' @param symbol Name of the R symbol.
 #' @param table Fully qualified name of a table in Opal.
-#' @param variables List of variable names or Javascript expression that selects the variables of a table (ignored if value does not refere to a table). See javascript documentation: http://wiki.obiba.org/display/OPALDOC/Variable+Methods
+#' @param variables List of variable names or Javascript expression that selects the variables of a table (ignored if value does not refere to a table). See javascript documentation: https://opaldoc.obiba.org/en/latest/magma-user-guide/methods.html
 #' @param missings If TRUE, missing values will be pushed from Opal to R, default is FALSE. Ignored if value is an R expression.
 #' @param identifiers Name of the identifiers mapping to use when assigning entities to R (from Opal 2.0).
 #' @param id.name Name of the column that will contain the entity identifiers. If not specified, the identifiers

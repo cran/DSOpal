@@ -1,18 +1,18 @@
-dda5a5292cef356277c587aff6fc781d *DESCRIPTION
-f2cd0660b90d3dda505d6ee4516a42f0 *NAMESPACE
+25b440bcfcf2e50b8af01704dcc2e367 *DESCRIPTION
+8be3c22cdb50484f564bbcaa9ca6cee7 *NAMESPACE
 e0ef681901465d24f47f9139cb2c086a *R/DSOpal-package.R
-6aec35cdacecd75077be6bc2d9653f14 *R/OpalConnection.R
+0da324644e29705273e5f7ec7bcf2e91 *R/OpalConnection.R
 a9f3c9df63e51ae9721a3c9350ce6317 *R/OpalDriver.R
 d83cdf16d3f2550bb5f263a816de0e73 *R/OpalResult.R
 22979915b6815299dec6339114c0b206 *R/datashield.aggregate.r
-4d2b0593e59c557607441837337380f8 *R/datashield.assign.r
+fd6c1fddfb556e1c645606dbaeac27c7 *R/datashield.assign.r
 03ff9d09f9f5c8f0b7b0b1be885799c9 *R/datashield.command.r
 db367408101907f4eab54816ebb517c0 *R/datashield.method.r
 a01c717a5cd04064e4d4577d0f6e242a *R/datashield.symbol.r
-e58c08a7b302795fbf5134bc6c0427e4 *R/datashield.workspace.r
+2c1c020d3e41318b44b5bc2080bb3691 *R/datashield.workspace.r
 64f938a984e81321992216de0594489d *R/logindata.R
 521d619e883bfcd9835945250d6dc5d2 *R/utils.R
-48ee7155c06098d08ebe87d1fe951deb *README.md
+1cc5df68b85f9a9523b942b3d94f521c *README.md
 ff5842e53e3216e3539ba7e33c65c4a8 *data/logindata.opal.demo.rda
 f2d37bd76e96fc3d3b7bedd9151cae5d *inst/examples/datashield-api.R
 62e72b8b66d765d9c597c8bcdf830cc0 *inst/examples/datashield-sim.R
@@ -22,7 +22,7 @@ c20981bbbf6b3b212dec3cdd584dd0ce *inst/examples/datashield.save.R
 c589e2b13e7f6a3c25a205c66b88fe20 *inst/tests/teardown.R
 19b9ee05074ae050645ddb208d49c677 *inst/tests/test-dsbase.R
 8000f7c32542610949a7cddf2eebeb0d *inst/tests/test-opal.R
-0d982f4b66540d424633c300ab45654a *man/DSOpal-package.Rd
+d6529593f3fb72465fb365ec92943e9b *man/DSOpal-package.Rd
 eab71d312b4f03cff38a81bd6d5110d8 *man/Opal.Rd
 2b114c1fac3b81bb60df4ee4674dc47f *man/OpalConnection-class.Rd
 0fa878c0ea4315e579665f5963182b4a *man/OpalDriver-class.Rd
@@ -30,7 +30,7 @@ a6222d4addc435f8c3752627dd000832 *man/OpalResult-class.Rd
 ba8e2945cbfc1e1401398c35fd721a1f *man/dot-datashield.aggregate.Rd
 793ee3a5f5a56cb66521e9412bd4cb4a *man/dot-datashield.assign.expr.Rd
 4ea06012ab0616e769c1a208696af757 *man/dot-datashield.assign.resource.Rd
-baffc36ada3efd26892f68e3b85b050d *man/dot-datashield.assign.table.Rd
+ef9a2d4ba7d22af5f6e8e0e9e96b0d06 *man/dot-datashield.assign.table.Rd
 fcd1f8d79ed3448179c135c3f94b9fc7 *man/dot-datashield.command.Rd
 ffa7a7504a9e321eca50c244b4372536 *man/dot-datashield.command_result.Rd
 7cc6b991057ddd0873f46fd6a8abf1c2 *man/dot-datashield.command_rm.Rd
@@ -40,6 +40,7 @@ d4adef47477e9eed7972f1f2c629bb7d *man/dot-datashield.commands.Rd
 eb1cb0cc2e6d09f4eeea785d8e4b9da9 *man/dot-datashield.profiles.Rd
 8961e81513ba50d10212b3f56a6b10b7 *man/dot-datashield.rm.Rd
 5fafc3063227bface1753231907377f0 *man/dot-datashield.symbols.Rd
+9de0914f1129f5c8fa23fd97f39368b4 *man/dot-datashield.workspace_restore.Rd
 646951cc09165276085d2f524c9ea9e7 *man/dot-datashield.workspace_rm.Rd
 a92953e7bbf11170344265a95425c808 *man/dot-datashield.workspace_save.Rd
 7eea7ee6da521453c7fa544177be6f2c *man/dot-datashield.workspaces.Rd
@@ -51,7 +52,7 @@ f64da057fff88df415db1321d389b75e *man/dot-rmDatashieldSession.Rd
 c0675d52cc6f1854c62174c7d4a96141 *man/dsAggregate-OpalConnection-method.Rd
 5e70d301889566be3f096e39c268d23e *man/dsAssignExpr-OpalConnection-method.Rd
 0a4997c3713416949b2d8d98d4b0e201 *man/dsAssignResource-OpalConnection-method.Rd
-8939f5a15f8e162e88268fd20f03262a *man/dsAssignTable-OpalConnection-method.Rd
+6e7dd1e58c03be5c7ad0e583ea3fea49 *man/dsAssignTable-OpalConnection-method.Rd
 f1a48d5e8c25fbd73d300ae2391f7772 *man/dsConnect-OpalDriver-method.Rd
 04be6f35ec7da57247d0bff22aa489a8 *man/dsDisconnect-OpalConnection-method.Rd
 298f2c3ca474abd9f4cd3c58e745eb32 *man/dsFetch-OpalResult-method.Rd
@@ -68,6 +69,7 @@ a567d0271debfc64b2e8a9981e5a28a6 *man/dsListProfiles-OpalConnection-method.Rd
 360bcd702367af9fd6e5ea1eab776616 *man/dsListSymbols-OpalConnection-method.Rd
 a9282c55e52980ee1cb16412e20cab38 *man/dsListTables-OpalConnection-method.Rd
 7c76eaaca88133259712be7e91c074ce *man/dsListWorkspaces-OpalConnection-method.Rd
+e59cfb3446e475bf802bb826f4668904 *man/dsRestoreWorkspace-OpalConnection-method.Rd
 b94134182b5560086759a3c5d16c7784 *man/dsRmSymbol-OpalConnection-method.Rd
 69df7164f18d9a3b603439ce918a7816 *man/dsRmWorkspace-OpalConnection-method.Rd
 d8bd2b36e1031f07e4eb53d3178039a4 *man/dsSaveWorkspace-OpalConnection-method.Rd
